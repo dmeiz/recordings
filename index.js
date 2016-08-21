@@ -1,1 +1,1 @@
-alert(require("./bear.js"));
+alert(require("./bear.js") + " says the bear while running for the people");
