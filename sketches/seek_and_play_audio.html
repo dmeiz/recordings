@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recordings</title>
+  </head>
+  <body>
+    <h1>Recordings</h1>
+    <audio id="recording" controls src="https://s3.amazonaws.com/methodhead-recordings/160806_0154.mp3"></audio>
+  </body>
+  <script>
+    // compute start time
+    var queryDict = {};
+    location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]});
+    var startTime = 0;
+    if (queryDict.start) {
+      startTime = parseFloat(queryDict.start);
+    }
+    console.log("startTime=" + startTime);
+
+    // get audio element
+    var audio = document.getElementById("recording");
+
+    // seek and play
+    audio.currentTime = startTime;
+    audio.play();
+  </script>
+</html>
