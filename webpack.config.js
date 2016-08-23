@@ -2,12 +2,13 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './index.js',
+  entry: './app.js',
   output: {
     path: __dirname,
     filename: 'bundle.js'
   },
   watch: true,
+  devtool: 'inline-source-map',
   module: {
     loaders: [
       {
