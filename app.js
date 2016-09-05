@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MyLabel from "./MyLabel";
-console.log(MyLabel);
+import Label from "./Label";
 
 ReactDOM.render(
-  (<div><MyLabel /><MyLabel /></div>),
+  (<div><Label /></div>),
   document.getElementById('content')
 );
 

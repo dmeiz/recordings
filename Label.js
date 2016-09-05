@@ -1,6 +1,6 @@
 import React from "react";
 
-class MyLabel extends React.Component {
+class Label extends React.Component {
   render() {
     return (
       <div>
@@ -13,4 +13,4 @@ class MyLabel extends React.Component {
   }
 }
 
-export default MyLabel;
+export default Label;
