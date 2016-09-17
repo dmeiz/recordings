@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "babel": "babel",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "browse": "open http://localhost:8080/"
   },
   "author": "Dan Hensgen",
   "license": "ISC",
