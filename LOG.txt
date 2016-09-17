@@ -15,3 +15,12 @@ MVP
 WHAT'S NEXT
 
   Render the Create form
+
+20160918
+
+  Reading up on forms:
+    https://facebook.github.io/react/docs/forms.html
+    https://facebook.github.io/react/docs/events.html#form-events
+
+  Reading up on routers:
+    https://css-tricks.com/learning-react-router/
