@@ -1,0 +1,18 @@
+MVP
+
+  Use Cases
+    * Create a recording
+      - Submit name, audioUrl
+    * View a recording
+      - View name
+      - Play audio
+
+  Data Model
+    * Recording
+      - name
+      - audioUrl
+
+WHAT'S NEXT
+
+  Render the Create form
+
