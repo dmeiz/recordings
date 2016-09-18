@@ -1,6 +1,7 @@
 MVP
 
   Use Cases
+    * Home/List Recordings
     * Create a recording
       - Submit name, audioUrl
 X       - Render form
@@ -21,7 +22,8 @@ OTHER AREAS
 
 NOW
 
-  Submit the form, store the data
+  Render the home page
+  - list recordings
 
 20160917
 
