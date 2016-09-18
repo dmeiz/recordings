@@ -1,6 +1,34 @@
 import React from "react";
 import TextInput from "./TextInput";
 
+/* state
+{
+  recordings: [
+    {
+      name: "Wicked Jam",
+      audioUrl: "https://s3.amazon.com/..."
+    },
+    ...
+  ]
+}
+*/
+
+const createRecording = (name, audioUrl) => (
+  {
+    type: "CREATE_RECORDING",
+    name,
+    audioUrl
+  }
+);
+
+const initialState = {
+  recordings: []
+}
+
+function recordingApp(state = initialState, action) {
+  return state;
+}
+
 class CreateRecording extends React.Component {
   onSubmit(ev) {
     ev.preventDefault();

@@ -3,6 +3,9 @@ MVP
   Use Cases
     * Create a recording
       - Submit name, audioUrl
+X       - Render form
+        - Submit form
+        - Store recording in the store
     * View a recording
       - View name
       - Play audio
@@ -12,11 +15,15 @@ MVP
       - name
       - audioUrl
 
-WHAT'S NEXT
+OTHER AREAS
 
-  Render the Create form
+  Tests
 
-20160918
+NOW
+
+  Submit the form, store the data
+
+20160917
 
   Reading up on forms:
     https://facebook.github.io/react/docs/forms.html
@@ -24,3 +31,8 @@ WHAT'S NEXT
 
   Reading up on routers:
     https://css-tricks.com/learning-react-router/
+
+20160918
+
+  Reading up on redux:
+    http://redux.js.org/docs/basics/
