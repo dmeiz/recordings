@@ -25,6 +25,11 @@ NOW
   Render the home page
   - list recordings
 
+20160918
+
+  Reading up on redux:
+    http://redux.js.org/docs/basics/
+
 20160917
 
   Reading up on forms:
@@ -33,8 +38,3 @@ NOW
 
   Reading up on routers:
     https://css-tricks.com/learning-react-router/
-
-20160918
-
-  Reading up on redux:
-    http://redux.js.org/docs/basics/

@@ -26,8 +26,25 @@ const initialState = {
 }
 
 function recordingApp(state = initialState, action) {
-  return state;
+  console.log(`Got action ${action.type}`);
+  switch (action.type) {
+    case "CREATE_RECORDING":
+      var newState = Object.assign({}, state);
+      newState.recordings.push(
+        {
+          name: action.name,
+          audioUrl: action.audioUrl
+        }
+      );
+      return newState;
+
+    default:
+      return state;
+  }
 }
+
+window.recordingApp = recordingApp
+window.createRecording = createRecording
 
 class CreateRecording extends React.Component {
   onSubmit(ev) {
