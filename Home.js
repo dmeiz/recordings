@@ -9,6 +9,13 @@ class Home extends React.Component {
         <ul>
           <li><Link to="/createRecording">Create Recording</Link></li>
         </ul>
+
+        <h1>Your Recordings</h1>
+        <ul>
+          {this.props.recordings.map((recording) => {
+            return <li>{recording.name}</li>
+          })}
+        </ul>
       </div>
     );
   }

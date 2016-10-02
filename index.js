@@ -49,7 +49,7 @@ window.recordingApp = recordingApp
 window.createRecording = createRecording
 
 let store = createStore(recordingApp);
+store.dispatch(createRecording("Wicked Jam", "http://s3.amazon.com/wicked-jam.mp3"));
 
-debugger
 
-ReactDOM.render((<App/>), document.getElementById('content'));
+ReactDOM.render((<App recordings={store.getState().recordings}/>), document.getElementById('content'));
