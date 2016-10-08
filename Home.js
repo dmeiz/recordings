@@ -13,7 +13,7 @@ class Home extends React.Component {
         <h1>Your Recordings</h1>
         <ul>
           {this.props.recordings.map((recording) => {
-            return <li>{recording.name}</li>
+            return <li>{recording.name} ({recording.audioUrl})</li>
           })}
         </ul>
       </div>

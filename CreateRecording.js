@@ -5,6 +5,8 @@ class CreateRecording extends React.Component {
   onSubmit(ev) {
     ev.preventDefault();
     console.log("submitted");
+    console.log("nameInput=" + this.nameInput.value);
+    //this.props.store.dispatch(createRecording())
   }
 
   onChange(ev) {
@@ -12,12 +14,16 @@ class CreateRecording extends React.Component {
     console.log("changed");
   }
 
+  constructor() {
+    super();
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
   render() {
     return (
       <div>
-        <form onChange={this.onChange} onSubmit={this.onSubmit}>
-          <TextInput label="Name" name="name"/>
-          <TextInput label="Audio Url" name="audioUrl"/>
+        <form onSubmit={this.onSubmit}>
+          <label>Name: <input type="text" name="name" ref={(c) => {this.nameInput = c}}/></label><br/>
           <input type="submit"/>
         </form>
       </div>
