@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { createStore } from 'redux';
+import { hashHistory } from 'react-router';
 
 /* state
 {
@@ -45,11 +46,12 @@ function recordingApp(state = initialState, action) {
   }
 }
 
-window.recordingApp = recordingApp
-window.createRecording = createRecording
-
 let store = createStore(recordingApp);
 store.dispatch(createRecording("Wicked Jam", "http://s3.amazon.com/wicked-jam.mp3"));
 
+function onCreateRecording(name, audioUrl) {
+  store.dispatch(createRecording(name, audioUrl));
+  hashHistory.push("/");
+}
 
-ReactDOM.render((<App store={store}/>), document.getElementById('content'));
+ReactDOM.render((<App store={store} onCreateRecording={onCreateRecording}/>), document.getElementById('content'));

@@ -2,22 +2,14 @@ import React from "react";
 import TextInput from "./TextInput";
 
 class CreateRecording extends React.Component {
-  onSubmit(ev) {
-    ev.preventDefault();
-    console.log("submitted");
-    console.log("nameInput=" + this.nameInput.value);
-    this.props.store.dispatch(createRecording(this.nameInput.value, "some url"));
-    console.log(this.props.store.getState());
-  }
-
-  onChange(ev) {
-    ev.preventDefault();
-    console.log("changed");
-  }
-
   constructor() {
     super();
     this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onSubmit(ev) {
+    ev.preventDefault();
+    this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
   }
 
   render() {
@@ -25,6 +17,7 @@ class CreateRecording extends React.Component {
       <div>
         <form onSubmit={this.onSubmit}>
           <label>Name: <input type="text" name="name" ref={(c) => {this.nameInput = c}}/></label><br/>
+          <label>AudioUrl: <input type="text" name="audioUrl" ref={(c) => {this.audioUrlInput = c}}/></label><br/>
           <input type="submit"/>
         </form>
       </div>

@@ -11,7 +11,7 @@ class App extends React.Component {
     )
 
     let WrappedCreateRecording = () => (
-        <CreateRecording store={this.props.store}/>
+        <CreateRecording store={this.props.store} onCreateRecording={this.props.onCreateRecording}/>
     )
 
     return (
