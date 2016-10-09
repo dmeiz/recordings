@@ -7,13 +7,17 @@ import Home from './Home';
 class App extends React.Component {
   render() {
     let WrappedHome = () => (
-        <Home recordings={this.props.recordings}/>
+        <Home recordings={this.props.store.getState().recordings}/>
+    )
+
+    let WrappedCreateRecording = () => (
+        <CreateRecording store={this.props.store}/>
     )
 
     return (
       <Router history={hashHistory}>
         <Route path="/" component={WrappedHome} recordings={this.props.recordings}/>
-        <Route path="/createRecording" component={CreateRecording}/>
+        <Route path="/createRecording" component={WrappedCreateRecording}/>
       </Router>
     )
   }

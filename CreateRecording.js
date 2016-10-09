@@ -6,7 +6,8 @@ class CreateRecording extends React.Component {
     ev.preventDefault();
     console.log("submitted");
     console.log("nameInput=" + this.nameInput.value);
-    //this.props.store.dispatch(createRecording())
+    this.props.store.dispatch(createRecording(this.nameInput.value, "some url"));
+    console.log(this.props.store.getState());
   }
 
   onChange(ev) {
