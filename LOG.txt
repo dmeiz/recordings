@@ -1,12 +1,13 @@
 MVP
 
   Use Cases
-    * Home/List Recordings
+X   * Home/List Recordings
     * Create a recording
       - Submit name, audioUrl
 X       - Render form
-        - Submit form
-        - Store recording in the store
+X       - Submit form
+X       - Store recording in the store
+        - Post new recording to a service
     * View a recording
       - View name
       - Play audio
