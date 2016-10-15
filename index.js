@@ -17,14 +17,6 @@ import { recordingApp } from './guts';
 }
 */
 
-const createRecording = (name, audioUrl) => (
-  {
-    type: "CREATE_RECORDING",
-    name,
-    audioUrl
-  }
-);
-
 let store = createStore(recordingApp);
 store.dispatch(createRecording("Wicked Jam", "http://s3.amazon.com/wicked-jam.mp3"));
 
