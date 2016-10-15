@@ -3,13 +3,6 @@ import * as assert from 'assert';
 import {recordingApp, createRecording} from '../guts';
 
 describe('createRecording', () => {
-  /*
-  it ('should return a CREATE_RECORDING action', () => {
-    var newState = recordingApp(null, {});
-    assert.equal({recordings:[]}, newState);
-  });
-  */
-
   it ('should create an action', () => {
     let action = createRecording("name", "audioUrl");
 
@@ -17,5 +10,20 @@ describe('createRecording', () => {
     assert.equal("name", action.name);
     assert.equal("audioUrl", action.audioUrl);
   });
+});
+
+describe('recordingApp', () => {
+  it ('should return initial state', () => {
+    let newState = recordingApp(undefined, {});
+
+    assert.deepEqual([], newState.recordings);
+  });
+
+  it ('should add a recording on CREATE_RECORDING', () => {
+    let newState = recordingApp(undefined, createRecording('name', 'audioUrl'));
+
+    assert.equal(1, newState.recordings.length);
+    assert.deepEqual({name:'name', audioUrl:'audioUrl'}, newState.recordings[0]);
+  })
 });
 
