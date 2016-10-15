@@ -19,12 +19,11 @@ X       - Store recording in the store
 
 OTHER AREAS
 
-  Tests
-
 NOW
 
-  Render the home page
-  - list recordings
+20161015
+
+  Got tests running for 
 
 20160918
 
