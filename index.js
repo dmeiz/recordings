@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { createStore } from 'redux';
 import { hashHistory } from 'react-router';
-import { recordingApp } from './guts';
+import { recordingApp, createRecording } from './guts';
 
 let store = createStore(recordingApp);
 
