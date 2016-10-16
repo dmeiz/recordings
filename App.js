@@ -3,15 +3,14 @@ import { Router, Route, hashHistory } from 'react-router';
 import CreateRecording from './CreateRecording';
 import Home from './Home';
 
-
 class App extends React.Component {
   render() {
     let WrappedHome = () => (
-        <Home recordings={this.props.store.getState().recordings}/>
+      <Home recordings={this.props.store.getState().recordings}/>
     )
 
     let WrappedCreateRecording = () => (
-        <CreateRecording store={this.props.store} onCreateRecording={this.props.onCreateRecording}/>
+      <CreateRecording store={this.props.store} onCreateRecording={this.props.onCreateRecording}/>
     )
 
     return (
