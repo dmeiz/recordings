@@ -2,6 +2,16 @@ import React from "react";
 import { Link } from 'react-router';
 
 class Home extends React.Component {
+  constructor() {
+    super();
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  onSubmit(ev) {
+    ev.preventDefault();
+    this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
+  }
+
   render() {
     return (
       <div>
@@ -16,6 +26,11 @@ class Home extends React.Component {
             return <li>{recording.name} ({recording.audioUrl})</li>
           })}
         </ul>
+        <form onSubmit={this.onSubmit}>
+          <label>Name: <input type="text" name="name" ref={(c) => {this.nameInput = c}}/></label><br/>
+          <label>AudioUrl: <input type="text" name="audioUrl" ref={(c) => {this.audioUrlInput = c}}/></label><br/>
+          <input type="submit"/>
+        </form>
       </div>
     );
   }
