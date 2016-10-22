@@ -27,8 +27,8 @@ class Home extends React.Component {
           })}
         </ul>
         <form onSubmit={this.onSubmit}>
-          <label>Name: <input type="text" name="name" ref={(c) => {this.nameInput = c}}/></label><br/>
-          <label>AudioUrl: <input type="text" name="audioUrl" ref={(c) => {this.audioUrlInput = c}}/></label><br/>
+          <input type="text" name="name" placeholder="Name" ref={(c) => {this.nameInput = c}}/>
+          <input type="text" name="audioUrl" placeholder="Audio URL" ref={(c) => {this.audioUrlInput = c}}/>
           <input type="submit"/>
         </form>
       </div>
