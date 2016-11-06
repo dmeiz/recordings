@@ -30,7 +30,9 @@ X       - Store recording in the store
 
 OTHER AREAS
 
-  * Rendering on store change
+X * Rendering on store change
+  * Using connect and select
+  * Application organization
   * Using state, rendering on state change
   * Testing views
   * Controlled form elements
@@ -38,7 +40,6 @@ OTHER AREAS
   * Posting to a service
   * View audio
   * Composing reducers
-  * Using connect and select
   * Using Immutable
   * Responsive styling
   * Layout/Routing
