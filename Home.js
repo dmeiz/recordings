@@ -6,13 +6,20 @@ class Home extends React.Component {
     super();
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
-      errors: ["Audio url is invalid", "Name has already been used."]
+      errors: []
     }
   }
 
   onSubmit(ev) {
     ev.preventDefault();
-    this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
+
+    if (!this.audioUrlInput.value.match(/^http/)) {
+      this.setState({errors: ["Audio url is invalid."]});
+    }
+    else {
+      this.setState({errors: []});
+      this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
+    }
   }
 
   render() {
