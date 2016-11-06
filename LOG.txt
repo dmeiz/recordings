@@ -28,12 +28,24 @@ X       - Store recording in the store
       - start
       - end
 
+  Store
+
+    {
+      recordings: [
+        {
+          name: "Wicked Jam",
+          audioUrl: "https://s3.amazon.com/wicked-jam.mp3"
+        },
+        ...
+      ]
+    }
+
 OTHER AREAS
 
 X * Rendering on store change
-  * Using connect and select
-  * Application organization
   * Using state, rendering on state change
+  * Application organization
+  * Using connect and select
   * Testing views
   * Controlled form elements
   * Styling
@@ -46,12 +58,11 @@ X * Rendering on store change
 
 NOW
 
-  App observes store and re-renders when updated.
-    - Move form to Home
+  Use state to capture validation errors in new recording form.
 
 20161015
 
-  Got tests running for 
+  Got tests running for something.
 
 20160918
 
