@@ -43,8 +43,8 @@ class Home extends React.Component {
         <h1>Welcome to Recordings!</h1>
         <h2>Your Recordings</h2>
         <ul>
-          {this.props.recordings.map((recording) => {
-            return <li>{recording.name} ({recording.audioUrl})</li>
+          {this.props.recordings.map((recording, i) => {
+            return <li key={i}>{recording.name} ({recording.audioUrl})</li>
           })}
         </ul>
         <form onSubmit={this.onSubmit}>
@@ -54,7 +54,7 @@ class Home extends React.Component {
         </form>
         {(() => {
           if (this.state.errors.length > 0) {
-            return <ul>{this.state.errors.map((error) => {return <li>{error}</li>})}</ul>;
+            return <ul>{this.state.errors.map((error, i) => {return <li key={i}>{error}</li>})}</ul>;
           }
         })()}
       </div>
