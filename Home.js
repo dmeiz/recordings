@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router';
 
 class Home extends React.Component {
   constructor() {
@@ -13,13 +12,27 @@ class Home extends React.Component {
   onSubmit(ev) {
     ev.preventDefault();
 
-    if (!this.audioUrlInput.value.match(/^http/)) {
-      this.setState({errors: ["Audio url is invalid."]});
-    }
-    else {
-      this.setState({errors: []});
+    let errors = this.validate();
+
+    this.setState({errors: errors});
+
+    if (errors.length == 0) {
       this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
     }
+  }
+
+  validate() {
+    let errors = [];
+
+    if (!this.audioUrlInput.value.match(/^http/)) {
+      errors.push("Audio url is invalid.");
+    }
+
+    if (this.nameInput.value.length == 0) {
+      errors.push("Name is blank");
+    }
+
+    return errors;
   }
 
   render() {
