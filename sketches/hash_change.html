@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hashchange</title>
+  </head>
+  <body>
+    Copy and paste:
+    <pre>
+      window.location.hash = "new";
+    </pre>
+  </body>
+  <script>
+    window.addEventListener("hashchange", function() { console.log("hash changed:", window.location.hash) }, false);
+  </script>
+</html>

@@ -7,19 +7,47 @@ X   * Home/List Recordings
 X       - Render form
 X       - Submit form
 X       - Store recording in the store
-        - Post new recording to a service
+        - Validate
+          - name, url
+          - duplicate name
     * View a recording
+      - Browse to View
       - View name
       - Play audio
+      - List tracks
+      - Link back to Home
 
   Data Model
     * Recording
       - name
       - audioUrl
+      - tracks
+
+    * Track
+      - name
+      - start
+      - end
 
 OTHER AREAS
 
+X * Rendering on store change
+  * Using connect and select
+  * Application organization
+  * Using state, rendering on state change
+  * Testing views
+  * Controlled form elements
+  * Styling
+  * Posting to a service
+  * View audio
+  * Composing reducers
+  * Using Immutable
+  * Responsive styling
+  * Layout/Routing
+
 NOW
+
+  App observes store and re-renders when updated.
+    - Move form to Home
 
 20161015
 

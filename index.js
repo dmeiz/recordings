@@ -7,11 +7,14 @@ import { recordingApp, createRecording } from './guts';
 
 let store = createStore(recordingApp);
 
-store.dispatch(createRecording("Wicked Jam", "http://s3.amazon.com/wicked-jam.mp3"));
-
 function onCreateRecording(name, audioUrl) {
   store.dispatch(createRecording(name, audioUrl));
-  hashHistory.push("/");
 }
 
-ReactDOM.render((<App store={store} onCreateRecording={onCreateRecording}/>), document.getElementById('content'));
+var render = () => {
+  ReactDOM.render((<App store={store} onCreateRecording={onCreateRecording}/>), document.getElementById('content'));
+}
+
+store.subscribe(render);
+
+store.dispatch(createRecording("Wicked Jam", "http://s3.amazon.com/wicked-jam.mp3"));
