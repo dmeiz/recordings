@@ -18,6 +18,8 @@ class Home extends React.Component {
 
     if (errors.length == 0) {
       this.props.onCreateRecording(this.nameInput.value, this.audioUrlInput.value);
+      this.nameInput.value = "";
+      this.audioUrlInput.value = "";
     }
   }
 
