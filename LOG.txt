@@ -44,6 +44,14 @@ OTHER AREAS
 X * Rendering on store change
 X * Using state, rendering on state change
 > * Application organization
+    src
+      guts.js
+      index.js
+      components
+        App.js
+        Home.js
+    public
+      index.html
   * Using connect and select
   * Composing reducers
   * Using Immutable
