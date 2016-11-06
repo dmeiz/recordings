@@ -15,12 +15,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        Welcome to Recordings!
-        <ul>
-          <li><Link to="/createRecording">Create Recording</Link></li>
-        </ul>
-
-        <h1>Your Recordings</h1>
+        <h1>Welcome to Recordings!</h1>
+        <h2>Your Recordings</h2>
         <ul>
           {this.props.recordings.map((recording) => {
             return <li>{recording.name} ({recording.audioUrl})</li>

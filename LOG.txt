@@ -30,8 +30,8 @@ X       - Store recording in the store
 
 OTHER AREAS
 
-  * Using state, rendering on state change
   * Rendering on store change
+  * Using state, rendering on state change
   * Testing views
   * Controlled form elements
   * Styling
@@ -44,6 +44,9 @@ OTHER AREAS
   * Layout/Routing
 
 NOW
+
+  App observes store and re-renders when updated.
+    - Move form to Home
 
 20161015
 
