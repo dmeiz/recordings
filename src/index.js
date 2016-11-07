@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { createStore } from 'redux';
 import { hashHistory } from 'react-router';
-import { recordingApp, createRecording } from './guts';
+import { recordingApp, createRecording } from 'reducers';
+import App from "components/App";
 
 let store = createStore(recordingApp);
 
