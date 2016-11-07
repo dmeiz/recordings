@@ -1,6 +1,6 @@
 //var assert = require('assert');
 import * as assert from 'assert';
-import {recordingApp, createRecording} from '../reducers';
+import {recordingApp, createRecording} from 'reducers';
 
 describe('createRecording', () => {
   it ('should create an action', () => {
