@@ -62,6 +62,7 @@ X * Using state, rendering on state change
   * View audio
   * Responsive styling
   * Layout/Routing
+  * Payload minimization
 
 20161015
 
