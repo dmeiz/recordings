@@ -4,8 +4,8 @@
   "description": "A recording annotator",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-register test/*.js",
-    "start": "webpack-dev-server",
+    "test": "NODE_PATH=src mocha --require babel-register test/*.js",
+    "start": "webpack-dev-server --content-base public",
     "babel": "babel",
     "webpack": "webpack",
     "browse": "open http://localhost:8080/",
